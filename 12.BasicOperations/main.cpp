@@ -28,10 +28,10 @@ int main(){
 	//Division
 	result_ab = a / b;
 	double div_ab = a / b;
-	cout << "a / b = " << div_ab << endl;
+	cout << "a / b = " << div_ab << endl;		//chia lay thương
 
 	//Modulus
 	result_ab = a % b;
-	cout << "a % b = " << result_ab << endl;
+	cout << "a % b = " << result_ab << endl;	//chia lay du
 	return 0;
 }
