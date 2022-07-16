@@ -1,3 +1,0 @@
-int *data = new int [1000000000000000] --> array too big, bad allocation
-
-Memory leaks: lose access to memory that dynamically allocated
