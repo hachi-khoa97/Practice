@@ -2,10 +2,11 @@
 using namespace std;
 
 int main(){
-    const char *message = {"Hachi"};            //if not const, warning: ISO C++ forbids converting a string constant to 'char*
+    const char *message = {"Hachi"};                            //if not const, warning: ISO C++ forbids converting a string constant to 'char*
     cout << "Message: " << message << endl;
-    cout << "Message: " << *message << endl;    //When derefernce, string will become array of char and ptr message will point
-                                                //to first element, in this case is "H"
+    cout << "Message: " << *message << endl;                    //When derefernce, string will become array of char and ptr message will point
+    cout << "Size of message: " << sizeof(message) << endl;     //to first element, in this case is "H"
+    cout << endl;
     //*message = "B"; //Compile error
 
     //Allow user to modify the string
