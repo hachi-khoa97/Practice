@@ -8,6 +8,8 @@ using namespace std;
 #define STR_RCHR_FUNC       4
 #define STR_CONCAT_FUNC     5
 #define STR_NCONCAT_FUNC    6
+#define STR_CPY_FUNC        7
+#define STR_NCPY_FUNC       8
 
 void str_len(){
     cout << "strlen" << endl;
@@ -65,7 +67,6 @@ void str_chr(){
 }
 
 void str_rchr(){
-    //Find last occurence
     cout << "strrchr" << endl;
 
     char input[] = "/home/ubuntu/hello.cpp";
@@ -102,6 +103,27 @@ void str_nconcat(){
     cout << strncat(dest,src,9) << endl;
 }
 
+void str_cpy(){
+    cout << "strcpy" << endl;
+    const char* source = "Hello Rickroll";
+    char *dest = new char[strlen(source) + 1];
+    strcpy(dest,source);
+
+    cout << "sizeof(dest): " << sizeof(dest) << "\tsizeof(source): " << sizeof(source) << endl;
+    cout << "strlen(dest): " << strlen(dest) << "\tstrlen(source): " << strlen(source) << endl;
+    cout << "dest: " << dest << endl;
+}
+void str_ncpy(){
+    cout << "strncpy" << endl;
+    const char* source = "Hello";
+    char dest[] = {'a','b','c','d','e','f','\0'};
+
+    cout << "dest: " << dest << endl;
+    cout << "Copying 2 character..." << endl;
+    strncpy(dest,source,2);
+
+    cout << "dest: " << dest << endl;
+}
 int main(){
     int choice = 0;
     cin >> choice;
@@ -112,20 +134,26 @@ int main(){
         case STR_CMP_FUNC:
             str_cmp();
             break;
-        case STR_NCMP_FUNC:
+        case STR_NCMP_FUNC:     //compare N first byte
             str_ncmp();
             break;
-        case STR_CHR_FUNC:
+        case STR_CHR_FUNC:      //find how many times a character appear
             str_chr();
             break;
-        case STR_RCHR_FUNC:
+        case STR_RCHR_FUNC:     //Find last occurence
             str_rchr();
             break;
         case STR_CONCAT_FUNC:
             str_concat();
             break;
-        case STR_NCONCAT_FUNC:
+        case STR_NCONCAT_FUNC:  //Concat n character
             str_nconcat();
+            break;
+        case STR_CPY_FUNC:
+            str_cpy();
+            break;
+        case STR_NCPY_FUNC:     //copy n character from src to dest
+            str_ncpy();
             break;
     }
     return 0; 
