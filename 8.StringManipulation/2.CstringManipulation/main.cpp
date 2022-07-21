@@ -7,6 +7,7 @@ using namespace std;
 #define STR_CHR_FUNC        3
 #define STR_RCHR_FUNC       4
 #define STR_CONCAT_FUNC     5
+#define STR_NCONCAT_FUNC    6
 
 void str_len(){
     cout << "strlen" << endl;
@@ -94,6 +95,13 @@ void str_concat(){
     cout << "dest1: " << dest1 << endl;
 }
 
+void str_nconcat(){
+    cout << "strncat" << endl;
+    char dest[50] = "hello ";
+    char src[50] = "Never gonna give u up";
+    cout << strncat(dest,src,9) << endl;
+}
+
 int main(){
     int choice = 0;
     cin >> choice;
@@ -115,6 +123,9 @@ int main(){
             break;
         case STR_CONCAT_FUNC:
             str_concat();
+            break;
+        case STR_NCONCAT_FUNC:
+            str_nconcat();
             break;
     }
     return 0; 
