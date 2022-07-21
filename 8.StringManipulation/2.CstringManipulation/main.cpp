@@ -78,8 +78,20 @@ void str_concat(){
     char dest[50] = "hello ";
     char src[50] = "world1";
     strcat(dest,src);
+    cout << "dest: " << dest << endl;
     strcat(dest,"abcaq");
     cout << "dest: " << dest << endl;
+    cout << "=======================================" << endl;
+    cout << "More concat: " << endl;
+    char *dest1 = new char[30]{'F','f','q','g','G','\0'};
+    char *source = new char[30]{',','m','o','\0'};
+
+    cout << "strlen(dest1): " << strlen(dest1) << endl;
+    cout << "strlen(source): " << strlen(source) << endl;
+    cout << "Concatenating ..." << endl;
+    strcat(dest1,source);
+    cout << "strlen(dest1): " << strlen(dest1) << endl;
+    cout << "dest1: " << dest1 << endl;
 }
 
 int main(){
