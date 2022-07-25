@@ -1,0 +1,1 @@
+int incre_mult(int a, int b);

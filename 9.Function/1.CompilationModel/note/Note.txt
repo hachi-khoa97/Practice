@@ -1,0 +1,7 @@
+1.Preprocessing
+	Find all the included statement which take whatever file included
+	--> Create a Translation Unit
+2.Compilation
+	Compile the TU file to create object file .o
+3.Linking
+	Create binary file from .o file
