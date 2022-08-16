@@ -8,7 +8,7 @@
 // Size: Hold how many element in vector
 // Capacity: How much element this vector can hold. If full, double the current capacity
 // Problem in vector
-// To many copy --> Performance
+// Too many copy --> Performance
 // Solution: Vec.reserve(1000)
 
 #include <iostream>
